@@ -81,6 +81,8 @@ hi Normal guibg=NONE ctermbg=NONE
 
 filetype on
 
+autocmd Filetype php setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
 nmap <F8> :TagbarToggle<CR>
 nnoremap <silent> K :call CocAction('doHover')<CR>
 nmap <leader>do <Plug>(coc-codeaction)
