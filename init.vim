@@ -30,6 +30,7 @@ call plug#begin("~/nvim/plugged")
   Plug 'tpope/vim-fugitive'               " Git plugin
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
+  Plug 'alvan/vim-closetag'
   Plug 'neoclide/coc.nvim', {'branch': 'release'} " Lanugage client
   let g:coc_global_extensions = [
         \'coc-tsserver',
@@ -65,6 +66,7 @@ source $HOME/.config/nvim/plugin_configs/fzf.vim
 source $HOME/.config/nvim/plugin_configs/ncm2.vim
 source $HOME/.config/nvim/plugin_configs/phpactor.vim
 source $HOME/.config/nvim/plugin_configs/coc-blade.vim
+source $HOME/.config/nvim/plugin_configs/vim-closetag.vim
 
 " Key remaps
 source $HOME/.config/nvim/remaps.vim

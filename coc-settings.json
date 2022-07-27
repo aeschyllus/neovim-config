@@ -6,7 +6,8 @@
     "json",
     "javascriptreact",
     "typescript.tsx",
-    "python"
+    "python",
+    "vue"
   ],
   "eslint.filetypes": [
     "javascript",
