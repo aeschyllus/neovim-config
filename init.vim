@@ -12,14 +12,15 @@ set expandtab
 set softtabstop=2
 set splitright
 set splitbelow
-" set colorcolumn=100
 set nowrap
+set signcolumn=yes
 
 call plug#begin("~/nvim/plugged")
   " General
   Plug 'vim-airline/vim-airline'          " Status tabline theme
   Plug 'vim-airline/vim-airline-themes'   " Status tabline theme
   Plug 'gruvbox-community/gruvbox'        " Theme
+  Plug 'sonph/onehalf', {'rtp': 'vim'}
   Plug 'scrooloose/nerdtree'              " File explorer with icons
   Plug 'ryanoasis/vim-devicons'           " File explorer with icons
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " File search
@@ -78,8 +79,10 @@ endif
 
 " Theme
 syntax enable
-colorscheme gruvbox
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 hi Normal guibg=NONE ctermbg=NONE
+highlight SignColumn guibg=NONE
 
 filetype on
 
