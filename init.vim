@@ -68,6 +68,7 @@ source $HOME/.config/nvim/plugin_configs/ncm2.vim
 source $HOME/.config/nvim/plugin_configs/phpactor.vim
 source $HOME/.config/nvim/plugin_configs/coc-blade.vim
 source $HOME/.config/nvim/plugin_configs/vim-closetag.vim
+source $HOME/.config/nvim/plugin_configs/coc.vim
 
 " Key remaps
 source $HOME/.config/nvim/remaps.vim
@@ -81,6 +82,8 @@ endif
 syntax enable
 colorscheme onehalfdark
 let g:airline_theme='onehalfdark'
+let g:airline_powerline_fonts=1
+set t_Co=256
 hi Normal guibg=NONE ctermbg=NONE
 highlight SignColumn guibg=NONE
 
@@ -89,6 +92,6 @@ filetype on
 autocmd Filetype php setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 nmap <F8> :TagbarToggle<CR>
-nnoremap <silent> K :call CocAction('doHover')<CR>
-nmap <leader>do <Plug>(coc-codeaction)
-nmap <silent> gd <Plug>(coc-definition)
+" nnoremap <silent> K :call CocAction('doHover')<CR>
+" nmap <leader>do <Plug>(coc-codeaction)
+" nmap <silent> gd <Plug>(coc-definition)
