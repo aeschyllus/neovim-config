@@ -45,13 +45,13 @@ call plug#begin("~/nvim/plugged")
 
   " PHP (Tailored for Laravel)
   Plug 'StanAngeloff/php.vim'             " Improved PHP syntax highlighting
-  Plug 'sheerun/vim-polyglot'             " Laravel blade formatter
-  Plug 'yaegassy/coc-blade', {'do': 'yarn install --frozen-lockfile'} " Laravel blade formatter
-  Plug 'ncm2/ncm2'                        " Auto completion engine
-  Plug 'ncm2/ncm2-bufword'
-  Plug 'roxma/nvim-yarp'                  " Yet Another Remote Plugin (dependency of ncm2)
-  Plug 'phpactor/phpactor', {'do': 'composer install', 'for': 'php'}  " PHP introspection and refactor tools
-  Plug 'phpactor/ncm2-phpactor'           " Phpactor integration for ncm2 (autocomplete)
+  " Plug 'sheerun/vim-polyglot'             " Laravel blade formatter
+  " Plug 'yaegassy/coc-blade', {'do': 'yarn install --frozen-lockfile'} " Laravel blade formatter
+  " Plug 'ncm2/ncm2'                        " Auto completion engine
+  " Plug 'ncm2/ncm2-bufword'
+  " Plug 'roxma/nvim-yarp'                  " Yet Another Remote Plugin (dependency of ncm2)
+  " Plug 'phpactor/phpactor', {'do': 'composer install', 'for': 'php'}  " PHP introspection and refactor tools
+  " Plug 'phpactor/ncm2-phpactor'           " Phpactor integration for ncm2 (autocomplete)
 
   " Javascript (Tailored for React)
   Plug 'pangloss/vim-javascript'          " JS highlighting
@@ -64,9 +64,9 @@ call plug#end()
 " Plugin specific settings
 source $HOME/.config/nvim/plugin_configs/nerdtree.vim
 source $HOME/.config/nvim/plugin_configs/fzf.vim
-source $HOME/.config/nvim/plugin_configs/ncm2.vim
-source $HOME/.config/nvim/plugin_configs/phpactor.vim
-source $HOME/.config/nvim/plugin_configs/coc-blade.vim
+" source $HOME/.config/nvim/plugin_configs/ncm2.vim
+" source $HOME/.config/nvim/plugin_configs/phpactor.vim
+" source $HOME/.config/nvim/plugin_configs/coc-blade.vim
 source $HOME/.config/nvim/plugin_configs/vim-closetag.vim
 source $HOME/.config/nvim/plugin_configs/coc.vim
 
@@ -94,5 +94,3 @@ autocmd Filetype php setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 nmap <F8> :TagbarToggle<CR>
 nmap <leader>do <Plug>(coc-codeaction)
-" nnoremap <silent> K :call CocAction('doHover')<CR>
-" nmap <silent> gd <Plug>(coc-definition)
