@@ -86,12 +86,13 @@ let g:airline_powerline_fonts=1
 set t_Co=256
 hi Normal guibg=NONE ctermbg=NONE
 highlight SignColumn guibg=NONE
+highlight LineNr guibg=NONE
 
 filetype on
 
 autocmd Filetype php setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 nmap <F8> :TagbarToggle<CR>
+nmap <leader>do <Plug>(coc-codeaction)
 " nnoremap <silent> K :call CocAction('doHover')<CR>
-" nmap <leader>do <Plug>(coc-codeaction)
 " nmap <silent> gd <Plug>(coc-definition)
