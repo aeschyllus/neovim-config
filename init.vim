@@ -14,6 +14,7 @@ set splitright
 set splitbelow
 set nowrap
 set signcolumn=yes
+set mouse=a
 
 call plug#begin("~/nvim/plugged")
   " General
@@ -21,6 +22,8 @@ call plug#begin("~/nvim/plugged")
   Plug 'vim-airline/vim-airline-themes'   " Status tabline theme
   Plug 'gruvbox-community/gruvbox'        " Theme
   Plug 'sonph/onehalf', {'rtp': 'vim'}
+  Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+  Plug 'embark-theme/vim', {'as': 'embark', 'branch': 'main'}
   Plug 'scrooloose/nerdtree'              " File explorer with icons
   Plug 'ryanoasis/vim-devicons'           " File explorer with icons
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " File search
@@ -45,7 +48,7 @@ call plug#begin("~/nvim/plugged")
 
   " PHP (Tailored for Laravel)
   Plug 'StanAngeloff/php.vim'             " Improved PHP syntax highlighting
-  " Plug 'sheerun/vim-polyglot'             " Laravel blade formatter
+  Plug 'sheerun/vim-polyglot'             " Laravel blade formatter
   " Plug 'yaegassy/coc-blade', {'do': 'yarn install --frozen-lockfile'} " Laravel blade formatter
   " Plug 'ncm2/ncm2'                        " Auto completion engine
   " Plug 'ncm2/ncm2-bufword'
@@ -66,7 +69,7 @@ source $HOME/.config/nvim/plugin_configs/nerdtree.vim
 source $HOME/.config/nvim/plugin_configs/fzf.vim
 " source $HOME/.config/nvim/plugin_configs/ncm2.vim
 " source $HOME/.config/nvim/plugin_configs/phpactor.vim
-" source $HOME/.config/nvim/plugin_configs/coc-blade.vim
+source $HOME/.config/nvim/plugin_configs/coc-blade.vim
 source $HOME/.config/nvim/plugin_configs/vim-closetag.vim
 source $HOME/.config/nvim/plugin_configs/coc.vim
 
@@ -80,8 +83,20 @@ endif
 
 " Theme
 syntax enable
-colorscheme onehalfdark
-let g:airline_theme='onehalfdark'
+
+" colorscheme onehalfdark
+" let g:airline_theme='onehalfdark'
+
+" let g:catppuccin_flavour="macchiato"
+" lua << EOF
+" require("catppuccin").setup({
+"   \ transparent_background = true,
+"   \ })
+" EOF
+" colorscheme catppuccin
+
+colorscheme embark
+
 let g:airline_powerline_fonts=1
 set t_Co=256
 hi Normal guibg=NONE ctermbg=NONE
@@ -90,7 +105,7 @@ highlight LineNr guibg=NONE
 
 filetype on
 
-autocmd Filetype php setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype php setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 autoindent
 
 nmap <F8> :TagbarToggle<CR>
 nmap <leader>do <Plug>(coc-codeaction)
