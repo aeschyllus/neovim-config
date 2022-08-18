@@ -20,9 +20,6 @@ call plug#begin("~/nvim/plugged")
   " General
   Plug 'vim-airline/vim-airline'          " Status tabline theme
   Plug 'vim-airline/vim-airline-themes'   " Status tabline theme
-  Plug 'gruvbox-community/gruvbox'        " Theme
-  Plug 'sonph/onehalf', {'rtp': 'vim'}
-  Plug 'catppuccin/nvim', {'as': 'catppuccin'}
   Plug 'embark-theme/vim', {'as': 'embark', 'branch': 'main'}
   Plug 'scrooloose/nerdtree'              " File explorer with icons
   Plug 'ryanoasis/vim-devicons'           " File explorer with icons
@@ -49,26 +46,17 @@ call plug#begin("~/nvim/plugged")
   " PHP (Tailored for Laravel)
   Plug 'StanAngeloff/php.vim'             " Improved PHP syntax highlighting
   Plug 'sheerun/vim-polyglot'             " Laravel blade formatter
-  " Plug 'yaegassy/coc-blade', {'do': 'yarn install --frozen-lockfile'} " Laravel blade formatter
-  " Plug 'ncm2/ncm2'                        " Auto completion engine
-  " Plug 'ncm2/ncm2-bufword'
-  " Plug 'roxma/nvim-yarp'                  " Yet Another Remote Plugin (dependency of ncm2)
-  " Plug 'phpactor/phpactor', {'do': 'composer install', 'for': 'php'}  " PHP introspection and refactor tools
-  " Plug 'phpactor/ncm2-phpactor'           " Phpactor integration for ncm2 (autocomplete)
 
   " Javascript (Tailored for React)
   Plug 'pangloss/vim-javascript'          " JS highlighting
   Plug 'HerringtonDarkholme/yats.vim'
   Plug 'maxmellon/vim-jsx-pretty'         " JSX highlighting
   Plug 'peitalin/vim-jsx-typescript'      " Typescript highlighting
-  "Plug 'leafgarland/typescript-vim'       " Typescript highlighting
 call plug#end()
 
 " Plugin specific settings
 source $HOME/.config/nvim/plugin_configs/nerdtree.vim
 source $HOME/.config/nvim/plugin_configs/fzf.vim
-" source $HOME/.config/nvim/plugin_configs/ncm2.vim
-" source $HOME/.config/nvim/plugin_configs/phpactor.vim
 source $HOME/.config/nvim/plugin_configs/coc-blade.vim
 source $HOME/.config/nvim/plugin_configs/vim-closetag.vim
 source $HOME/.config/nvim/plugin_configs/coc.vim
@@ -83,17 +71,6 @@ endif
 
 " Theme
 syntax enable
-
-" colorscheme onehalfdark
-" let g:airline_theme='onehalfdark'
-
-" let g:catppuccin_flavour="macchiato"
-" lua << EOF
-" require("catppuccin").setup({
-"   \ transparent_background = true,
-"   \ })
-" EOF
-" colorscheme catppuccin
 
 colorscheme embark
 
